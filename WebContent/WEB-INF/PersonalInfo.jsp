@@ -1,35 +1,43 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
-    <title>Personal Info</title>
+  <title>Personal Information</title>
 </head>
 <body>
 
-	<h3> STUDENT ADMISSION FORM FOR ENGINEERING COURSES</h3>
+	<h3> Personal Information</h3>
 
 	<form action="/Recruitment_Project/ProfessionalInfo.html" method="post">
 	
 		<table>
 		<tr>
-			<td>Student's Name : </td><td>        <input type="text" name="studentName" /></td>
+			<td>Name : </td><td>        <input type="text" name="name" /></td>
 		</tr>
 		<tr>
-			<td>Student's Hobby : </td><td>       <input type="text" name="studentHobby" /></td>
-		</tr>
-	
-			<tr>
-			<td>Student's Mobile : </td><td>      <input type="text" name="studentMobile" /></td>
+			<td>Email: </td><td>       <input type="text" name="Email" /></td>
 		</tr>
 		<tr>
-			<td>Student's DOB : </td><td>     	   <input type="text" name="studentDOB" /></td>
+			<td>Age: </td><td>       <input type="text" name="Age" /></td>
 		</tr>
 		<tr>
-			<td>Student's Skills set :</td><td>    <select name="studentSkills" multiple>
-													<option value="Java Core">Java Core</option>
-													<option value="Spring Core">Spring Core</option>
-													<option value="Spring MVC">Spring MVC</option>
+			<td>Hobbies : </td><td>       <input type="text" name="Hobbies" /></td>
+		</tr>
+		<tr>
+			<td>DOB : </td><td>       <input type="text" name="DOB" /></td>
+		</tr>
+		<tr>
+			<td>Gender :</td><td>    <select name="Gender" multiple>
+													<option value="M">Male</option>
+													<option value="F">Female</option>
+													<option value="Other">Other</option>
 													</select><td>
 		</tr>
+		
+			<tr>
+			<td>Mobile : </td><td>      <input type="text" name="Mobile" /></td>
+		</tr>
+		
+		
 		
 		<tr><td><input type="submit" value="Submit this form by clicking here" /></td></tr>
 		
@@ -40,3 +48,8 @@
 </body>
 </html>
 
+
+
+
+ 
+            

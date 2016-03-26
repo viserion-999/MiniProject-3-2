@@ -5,44 +5,58 @@ import java.util.Date;
 public class Input_form {
 
 
-		private String studentName;
-		private String studentHobby;
+		private String name;
+		private String email;
+		private int age;
+		private String hobbies;
+		private Date dob;
+		private ArrayList<String> gender;
+		private Long mobile;
+
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public String getEmail() {
+			return email;
+		}
+		public void setEmail(String email) {
+			this.email = email;
+		}
+		public int getAge() {
+			return age;
+		}
+		public void setAge(int age) {
+			this.age = age;
+		}
+		public String getHobbies() {
+			return hobbies;
+		}
+		public void setHobbies(String hobbies) {
+			this.hobbies = hobbies;
+		}
+		public Date getDob() {
+			return dob;
+		}
+		public void setDob(Date dob) {
+			this.dob = dob;
+		}
+		public ArrayList<String> getGender() {
+			return gender;
+		}
+		public void setGender(ArrayList<String> gender) {
+			this.gender = gender;
+		}
 		
-		private Long studentMobile;
-		private Date studentDOB;
-		private ArrayList<String> studentSkills;
-
-		public Long getStudentMobile() {
-			return studentMobile;
+		public Long getMobile() {
+			return mobile;
 		}
-		public void setStudentMobile(Long studentMobile) {
-			this.studentMobile = studentMobile;
+		public void setMobile(Long mobile) {
+			this.mobile = mobile;
 		}
-		public Date getStudentDOB() {
-			return studentDOB;
-		}
-		public void setStudentDOB(Date studentDOB) {
-			this.studentDOB = studentDOB;
-		}
-		public ArrayList<String> getStudentSkills() {
-			return studentSkills;
-		}
-		public void setStudentSkills(ArrayList<String> studentSkills) {
-			this.studentSkills = studentSkills;
-		}
-
-		public String getStudentName() {
-			return studentName;
-		}
-		public void setStudentName(String studentName) {
-			this.studentName = studentName;
-		}
-		public String getStudentHobby() {
-			return studentHobby;
-		}
-		public void setStudentHobby(String studentHobby) {
-			this.studentHobby = studentHobby;
-		}
+	
 	}
 
 	

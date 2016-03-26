@@ -33,7 +33,7 @@ public class Hello{
 	        return mav;     
 	    }
 		@RequestMapping(value="/ProfessionalInfo.html", method = RequestMethod.POST)
-			public ModelAndView submitAdmissionForm(@ModelAttribute("student1") Input_form student) {
+			public ModelAndView submitAdmissionForm(@ModelAttribute("Candidate1") Input_form student) throws Exception {
 				
 
 				ModelAndView model1 = new ModelAndView("ProfessionalInfo");
