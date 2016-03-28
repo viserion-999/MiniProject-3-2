@@ -14,7 +14,7 @@
  
 	
  <bean name="/welcome.html" class="com.recruit_pack.Hello" />
- 
+ <mvc:annotation-driven/>
  
  <bean id="viewResolver"
     	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
@@ -25,9 +25,10 @@
             <value>.jsp</value>
         </property>
  </bean>
- 		   <mvc:resources mapping="/images/**" location="/WEB-INF/images"/>
-			
-    <mvc:annotation-driven />
-     
-
+ <bean id="messageSource"
+        class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+ 
+        <property name="basename" value="/WEB-INF/Candidate" />
+ 	
+</bean>
 </beans>

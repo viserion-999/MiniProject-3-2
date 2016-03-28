@@ -2,15 +2,26 @@ package com.form_input;
 
 import java.util.ArrayList;
 import java.util.Date;
+import javax.validation.constraints.*;
+import org.hibernate.validator.constraints.Range;
+
 public class Input_form {
 
-
+		@Size(min=3, max=15)
 		private String name;
+		@NotNull
 		private String email;
+		
+		@Range(min = 20, max = 50,message="Input values between 20 and 50 for age")
 		private int age;
+		
+		@IsValidHobby(listOfValidHobbies="Music|Football|Cricket|Hockey")
 		private String hobbies;
+		
+		@Past
 		private Date dob;
 		private ArrayList<String> gender;
+		
 		private Long mobile;
 
 		public String getName() {
