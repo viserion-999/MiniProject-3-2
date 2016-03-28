@@ -1,52 +1,66 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
+<link type="text/css" rel="stylesheet" href="css/form_style.css">
+<link type="text/javascript" rel="stylesheet" href="js/form_style1.js">
   <title>Personal Information</title>
 </head>
 <body>
-
-	<h3> Personal Information</h3>
-	<form:errors path="Candidate1.*"/>
-	<form action="/Recruitment_Project/ProfessionalInfo.html" method="post">
+	<header>
+	<h1>Personal Information</h1>
+</header>
 	
-		<table>
-		<tr>
+<div id="form">
+<div class="fish" id="fish"></div>
+<div class="fish" id="fish2"></div>
+
+	<form:errors path="Candidate1.*"/>
+	<form id="waterform" action="/Recruitment_Project/ProfessionalInfo.html" method="get">
+	
+		<div class="formgroup" id="name-form">
+   			 <label for="name">Your name*</label>
+    		<input type="text" id="name" name="name" />
+	</div>
+			
+		<div class="formgroup" id="email-form">
+   			 <label for="email">Your e-mail*</label>
+   			 <input type="email" id="email" name="email" />
+		</div>
 		
-			<td>Name : </td><td>        <input type="text" name="name" /></td>
-			<td><form:errors path="name" /></td>
-		</tr>
-		<tr>
-			<td>Email: </td><td>       <input type="email" name="email" /></td>
-		</tr>
-		<tr>
-			<td>Age: </td><td>       <input type="text" name="age" /></td>
-		</tr>
-		<tr>
-			<td>Hobbies : </td><td>       <input type="text" name="hobbies" /></td>
-		</tr>
-		<tr>
-			<td>DOB : </td><td>       <input type="date" name="dob" /></td>
-		</tr>
-		<tr>
-			<td>Gender :</td><td>    <select name="gender" multiple>
-													<option value="M">Male</option>
-													<option value="F">Female</option>
-													<option value="Other">Other</option>
-													</select><td>
-		</tr>
+				<div class="formgroup" id="age-form">
+    			<label for="age">Your Age*</label>
+   			 <input type="text" id="age" name="age" />
+			</div>
 		
-			<tr>
-			<td>Mobile : </td><td>      <input type="text" name="mobile" /></td>
-		</tr>
+				<div class="formgroup" id="hobbies-form">
+    			<label for="hobbies">Your Hobbies</label>
+   			 <input type="text" id="hobbies" name="hobbies" />
+			</div>
 		
+				<div class="formgroup" id="dob-form">
+    			<label for="dob">Your DOB</label>
+   					 <input type="date" id="dob" name="dob" />
+					</div>
+				
+				<div class="formgroup" id="gender-form">
+    			<label for="gender">Your Gender</label>
+   					<div class="radioGroup">
+   					<label for="male">Male
+   					<input type="radio" name="gender" value="male" checked> </label>
+   					<label for="Female">Female
+  					<input type="radio" name="gender" value="female"> </label>
+  					<label for="Other">Other
+  					<input type="radio" name="gender" value="other"> </label>
+					</div>
+			</div>
+			<div class="formgroup" id="num-form">
+    			<label for="number">Your Number</label>
+   					 <input type="text" id="number" name="number" />
+					</div>
 		
-		
-		<tr><td><input type="submit" value="Submit this form by clicking here" /></td></tr>
-		
-		</table>
-		
+<input type="submit" value="Submit this form by clicking here" />
 	</form>
- 
+ </div>
 </body>
 </html>
 

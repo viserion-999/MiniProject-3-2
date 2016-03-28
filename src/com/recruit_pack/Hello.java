@@ -44,7 +44,7 @@ public class Hello{
 	        ModelAndView mav = new ModelAndView("PersonalInfo");
 	        return mav;     
 	    }
-		@RequestMapping(value="/ProfessionalInfo.html", method = RequestMethod.POST)
+		@RequestMapping(value="/ProfessionalInfo.html", method = RequestMethod.GET)
 			public ModelAndView submitAdmissionForm(@Valid @ModelAttribute("Candidate1") Input_form student, BindingResult result, Map<String, Object> model ) throws Exception {
 				if(result.hasErrors()){
 					ModelAndView model1 = new ModelAndView("PersonalInfo");
@@ -55,5 +55,28 @@ public class Hello{
 				ModelAndView model1 = new ModelAndView("ProfessionalInfo");
 				return model1;
 		}
+		@RequestMapping(value="/EducationalInfo.html", method = RequestMethod.GET)
+		public ModelAndView showEducationalInfo(@Valid @ModelAttribute("Candidate1") Input_form student, BindingResult result, Map<String, Object> model ) throws Exception {
+			if(result.hasErrors()){
+				ModelAndView model1 = new ModelAndView("ProfessionalInfo");
+				return model1;
+				
+			}
+
+			ModelAndView model1 = new ModelAndView("EducationalInfo");
+			return model1;
+	}
+		@RequestMapping(value="/Thankyou.html", method = RequestMethod.GET)
+		public ModelAndView showThankyou(@Valid @ModelAttribute("Candidate1") Input_form student, BindingResult result, Map<String, Object> model ) throws Exception {
+			if(result.hasErrors()){
+				ModelAndView model1 = new ModelAndView("EducationalInfo");
+				return model1;
+				
+			}
+
+			ModelAndView model1 = new ModelAndView("Thankyou");
+			return model1;
+	}
+		
 }
 

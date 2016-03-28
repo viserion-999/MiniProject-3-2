@@ -1,43 +1,43 @@
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
+<head>
+  <title>Professional Information</title>
+</head>
 <body>
+
+	<h3>Professional Information</h3>
+	<form:errors path="Candidate1.*"/>
+	<form action="/Recruitment_Project/EducationalInfo.html" method="get">
 	
+		<table>
+		<tr>
+		
+			<td>Company Name : </td><td>        <input type="text" name="companyname" /></td>
+			<td><form:errors path="companyname" /></td>
+		</tr>
+		<tr>
+		
+			<td>Job title : </td><td>        <input type="text" name="jobtitle" /></td>
+			<td><form:errors path="jobtitle" /></td>
+		</tr>
+		<tr>
+			<td>Start Date: </td><td>       <input type="date" name="startdate" /></td>
+		</tr>
+		<tr>
+			<td>End Date: </td><td>       <input type="date" name="enddate" /></td>
+		</tr>
+			
+		<tr><td><input type="submit" value="Submit Professional Info" /></td></tr>
+		
+		</table>
+		
+	</form>
  
-	<h3>Submitted Details</h3>
-
-	<h2>Details submitted by you:: </h2>
-
-	<table>
-		<tr>
-			<td> Name :</td>
-			<td>${Candidate1.name}</td>
-		</tr>
-		<tr>
-			<td> Email :</td>
-			<td>${Candidate1.email}</td>
-		</tr>
-		<tr>
-			<td> Age :</td>
-			<td>${Candidate1.age}</td>
-		</tr>
-		<tr>
-			<td> Hobbies :</td>
-			<td>${Candidate1.hobbies}</td>
-		</tr>
-
-		<tr>
-			<td> DOB :</td>
-			<td>${Candidate1.dob}</td>
-		</tr>
-		<tr>
-			<td> Gender :</td>
-			<td>${Candidate1.gender}</td>
-		</tr>
-		<tr>
-			<td> Mobile :</td>
-			<td>${Candidate1.mobile}</td>
-		</tr>
-
-	</table>
-
 </body>
 </html>
+
+
+
+
+ 
+            
