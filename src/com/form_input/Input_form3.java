@@ -6,10 +6,10 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
 public class Input_form3 {
-	@NotNull
+
 	private String instiname;
 	private int grade;
-	@Past
+
 	private Date gradyear;
 	
 	

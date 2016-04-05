@@ -7,12 +7,12 @@ import javax.validation.constraints.Past;
 
 
 public class Input_form2 {
-	@NotNull
+
 	private String companyname;
 	private String jobtitle;
-	@Past
+
 	private Date startdate;
-	@Past
+
 	private Date enddate;
 	
 	
