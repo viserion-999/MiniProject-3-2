@@ -1,41 +1,32 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
-<head>
-  <title>Educational Information</title>
-</head>
+<head><link type="text/css" rel="stylesheet" href="css/form_style.css"></head>
 <body>
 
-	<h3>Educational Information</h3>
-	<form:errors path="Candidate1.*"/>
-	<form action="/Recruitment_Project/Thankyou.html" method="get">
-	
-		<table>
-		<tr>
-		
-			<td>Institution Name : </td><td>        <input type="text" name="instiname" /></td>
-			<td><form:errors path="instiname" /></td>
-		</tr>
-		<tr>
-		
-			<td>Grade Obtained(in Numbers/Percentage) : </td><td>        <input type="text" name="grade" /></td>
-			<td><form:errors path="grade" /></td>
-		</tr>
-		<tr>
-			<td>Graduation Year: </td><td>       <input type="date" name="gradyear" /></td>
-		</tr>
-	
+<div>  
+  <div class="sky">
+  </div>
+  <div class="grass">
+  </div>  
+  <div id="contact-form">
+    <form action="/Recruitment_Project/Thankyou.html" method="get">
+      <h3> Educational Information</h3>
+
+   			 <label for="instiname">Institution Name</label>
+    		<input type="text" id="instiname" name="instiname" />
+
 			
-		<tr><td><input type="submit" value="Submit Educational Info" /></td></tr>
-		
-		</table>
-		
-	</form>
- 
+		 <label for="grade">Grade Obtained(in Numbers/Percentage)</label>
+    		<input type="text" id="grade" name="grade" />
+	
+				
+    			<label for="gradyear">Graduation Year</label>
+   					 <input type="date" id="gradyear" name="gradyeare" />
+					
+     
+                  <input type="submit" id="send" name="send" value="Send">
+            </form>
+  </div>
+</div>
 </body>
 </html>
-
-
-
-
- 
-            

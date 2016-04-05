@@ -4,16 +4,19 @@ import java.util.ArrayList;
 import java.util.Date;
 import javax.validation.constraints.*;
 import org.hibernate.validator.constraints.Range;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 
 public class Input_form {
 
 		@Size(min=3, max=15)
 		private String name;
-		@NotNull
+
+	    @NotEmpty(message = "Incorrect Email or age")  @Email
 		private String email;
 		
-		@Range(min = 20, max = 50,message="Input values between 20 and 50 for age")
-		private int age;
+	   @NotNull
+	    private int age;
 		
 		@IsValidHobby(listOfValidHobbies="Music|Football|Cricket|Hockey")
 		private String hobbies;
@@ -21,7 +24,7 @@ public class Input_form {
 		@Past
 		private Date dob;
 		private ArrayList<String> gender;
-		
+		@Max(10)
 		private Long mobile;
 
 		public String getName() {

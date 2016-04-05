@@ -10,13 +10,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
 import java.util.Map;
 import javax.validation.Valid;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.bind.annotation.ModelAttribute;
-
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 
@@ -52,6 +51,7 @@ public class Hello{
 					return model1;
 					
 				}
+
 				ModelAndView model1 = new ModelAndView("ProfessionalInfo");
 				return model1;
 		}
@@ -79,4 +79,3 @@ public class Hello{
 	}
 		
 }
-
