@@ -63,7 +63,9 @@
                  
 
                  
-                  <input type="submit" id="send" name="Submit" value="Send">
+                  <input type="submit" value="Next" name="_target1"/>
+                  <input type="submit" value="Cancel" name="_cancel"/>
+                  
             </form>
   </div>
 </div>

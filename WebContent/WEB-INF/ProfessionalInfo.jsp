@@ -29,7 +29,11 @@
    					 <input type="date" id="enddate" name="enddate" />
 
                  
-                  <input type="submit" id="send" name="Submit" value="Send">
+                 
+                  <input type="submit" value="Previous" name="_target0"/>
+                  <input type="submit" value="Next" name="_target2"/>
+                   <input type="submit" value="Cancel" name="_cancel"/>
+       
             </form>
   </div>
 </div>

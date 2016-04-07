@@ -23,8 +23,9 @@
     			<label for="gradyear">Graduation Year</label>
    					 <input type="date" id="gradyear" name="gradyeare" />
 					
-     
-                  <input type="submit" id="send" name="send" value="Send">
+                     <input type="submit" value="Previous" name="_target1"/>
+                      <input type="submit" value="Finish" name="_finish"/>
+                      <input type="submit" value="Cancel" name="_cancel"/>
             </form>
   </div>
 </div>
