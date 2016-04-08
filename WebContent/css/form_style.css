@@ -19,9 +19,20 @@ body{
   height: 20px;
   margin: 0 auto;
 }
-
+.radioGroup input{
+	width: 20px;
+	height: 20px;
+	display:inline-block;
+	padding: 20px;	
+	 -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+    color:white; 
+	
+}
 #contact-form{
-  width: 100%;  
+  width: 100%;
+  height:auto;  
   background: #241109;
   background: -webkit-linear-gradient(rgba(31,15,8,1) 1%,rgba(36,17,9,1) 93%,rgba(26,7,5,1));
   background: linear-gradient(rgba(31,15,8,1) 1%,rgba(36,17,9,1) 93%,rgba(26,7,5,1));  
@@ -39,7 +50,7 @@ h2{
 }
 
 input,
-textarea{
+textarea,select{
   -moz-box-sizing: border-box;
 	       box-sizing: border-box;
   width: 300px;
@@ -56,6 +67,7 @@ textarea{
   font-size:16px;
   color: #e0ddd1;
   outline: none;
+ 
 }
 
 #text{

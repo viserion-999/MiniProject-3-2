@@ -1,20 +1,18 @@
 package com.form_input;
 import java.util.Date;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
-
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 public class Input_form2 {
 
 	private String companyname;
 	private String jobtitle;
-
+	 @DateTimeFormat(pattern = "dd-MM-yyyy")
 	private Date startdate;
-
+	 @DateTimeFormat(pattern = "dd-MM-yyyy")
 	private Date enddate;
-	
+	 private String city;
 	
 	public String getCompanyname() {
 		return companyname;
@@ -44,6 +42,11 @@ public class Input_form2 {
 	public void setEnddate(Date enddate) {
 		this.enddate = enddate;
 	}
-	
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city=city;
+	}
 
 }

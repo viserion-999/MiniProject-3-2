@@ -13,7 +13,8 @@
  <bean	id="HandlerMapping"  class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
  
 	
- <bean name="/welcome.html" class="com.recruit_pack.Hello" />
+ <bean name="/welcome.html" class="com.recruit_pack.Hello"/>
+
  <mvc:annotation-driven/>
  
  <bean id="viewResolver"
@@ -25,6 +26,7 @@
             <value>.jsp</value>
         </property>
  </bean>
+ 
  <bean id="messageSource"
         class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
  

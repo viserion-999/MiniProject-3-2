@@ -5,13 +5,16 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
-public class Input_form3 {
+import org.hibernate.validator.constraints.NotEmpty;
 
+public class Input_form3 {
+	 @NotEmpty(message = "Institute/University name is a required field!")
 	private String instiname;
+	 	
 	private int grade;
 
-	private Date gradyear;
-	
+	private String gmonth;
+	private String gyear;
 	
 	
 	public String getInstiname() {
@@ -27,14 +30,21 @@ public class Input_form3 {
 		this.grade=grade;
 	}	
 	
-	public Date getGradyear() {
-		return gradyear;
+	public String getGmonth() {
+		return gmonth;
 	}
 
-	public void seGgraddate(Date gradyear) {
-		this.gradyear = gradyear;
+	public void setGmonth(String gmonth) {
+		this.gmonth = gmonth;
 	}
 	
+	public String getGyear() {
+		return gyear;
+	}
+
+	public void setGyear(String gyear) {
+		this.gyear = gyear;
+	}
 
 	
 }

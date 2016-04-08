@@ -1,11 +1,15 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head><link type="text/css" rel="stylesheet" href="css/form_style.css">
-<style>
-    .error {
-        color: red; font-weight: bold;
-    }
-</style>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker({ dateFormat: 'dd-mm-yy' });;
+  });
+  </script>
 </head>
 <body>
 
@@ -18,53 +22,61 @@
   
 	<form:errors path="Candidate1.*"/>
     <form action="/Recruitment_Project/ProfessionalInfo.html" method="get">
-      <h2> Personal Information</h2>
+      <h2> Personal Information</h2><br>
 
-   			 <label for="name">Your name*</label>
+   			 <label for="name">Your name*</label><br>
     		<input type="text" id="name" name="name" />
-
-			
-	
-   			 <label for="email">Your e-mail*</label>
-   			 <input type="text" id="email" name="email" />
-   			 <form:errors path="email" cssClass="error"/>
-	
+    		
+    		<br>
 		
-				
-    			<label for="age">Your Age*</label>
-   			 <input type="text" id="age" name="age" />
-		
-		
-			
-    			<label for="hobbies">Your Hobbies</label>
-   			 <input type="text" id="hobbies" name="hobbies" />
-		
-		
-				
-    			<label for="dob">Your DOB</label>
-   					 <input type="date" id="dob" name="dob" />
-					
-				
-			
-    			<label for="gender">Your Gender<br></label>
+			<label for="gender">Your Gender</label><br><br>
    					<div class="radioGroup">
    					<label for="male">Male
-   					<input type="radio" name="gender" value="male" checked> </label>
+   					<input type="radio" id="ignore" name="gender" value="male" checked> </label>
    					<label for="Female">Female
-  					<input type="radio" name="gender" value="female"> </label>
+  					<input type="radio" id="ignore1 "name="gender" value="female"> </label>
   					<label for="Other">Other
-  					<input type="radio" name="gender" value="other"> </label>
+  					<input type="radio" id="ignore2 "name="gender" value="other"> </label>
 					</div>
 		
+			<br>
+			
+			<label for="dob">Your DOB*</label><br>
+   					 <input type="text" id="datepicker" name="dob" />
+   			<br>
+			
+			 <label for="nationality">Your nationality</label><br>
+    		<input type="text" id="nationality" name="nationality" />
+    		
+    		<br>
+			
 	
-    			<label for="number">Your Number</label>
-   					 <input type="text" id="number" name="number" />
-				
-                 
-
+   			 <label for="email">Your e-mail*</label><br>
+   			 <input type="text" id="email" name="email" />
+   			 
+   			 <br>
+   				<label for="number">Your Number</label><br>
+   				<input type="text" id="number" name="number" />
+   			
+   			<br>		 
+	
+	
+			
+    			<label for="hobbies">Your Hobbies</label><br>
+   				<select name="hobbies">
+   					<option value="NONE" label="--- Select ---"></option>
+					 <option value="Music">Music</option>
+   					 <option value="Football">Football</option>
+   					 <option value="Cricket">Cricket</option>
+    				<option value="Hockey">Hockey</option>
+    				<option value="Reading">Reading</option>
+				       </select>
+				       
+				  <br><br>
+							
                  
                   <input type="submit" value="Next" name="_target1"/>
-                  <input type="submit" value="Cancel" name="_cancel"/>
+                 
                   
             </form>
   </div>
