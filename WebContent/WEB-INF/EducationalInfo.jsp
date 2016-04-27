@@ -1,4 +1,5 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@page import="java.util.*"%>
 <html>
 <head><link type="text/css" rel="stylesheet" href="css/form_style.css">
 <script type="text/javascript">
@@ -36,7 +37,7 @@ thisyear-=1
   </div>  
   <div id="contact-form">
   	<form:errors path="Candidate1.*"/>
-    <form action="/Recruitment_Project/Thankyou.html" method="get">
+    <form action="dbconn" method="get">
       <h3> Educational Information</h3>
 			
    			 <label for="instiname">Institution Name</label>
@@ -67,6 +68,25 @@ thisyear-=1
               </form>
   </div>
 </div>
+	<%
+ 	String schoold=request.getParameter("instiname");
+	String marks1d=request.getParameter("grade");
+	String hschoold=request.getParameter("gmonth");
+	String marks2d=request.getParameter("gyear");
+	
+	List<String> edu = new ArrayList<String>();
+	edu.add("schoold");
+	edu.add("marks1d");
+	edu.add("hschoold");
+	edu.add("marks2d");
 
+	session.setAttribute("education",edu);
+	//session.setAttribute("sschool",schoold);
+	//session.setAttribute("smarks1",marks1d);
+	//session.setAttribute("shschool",hschoold);
+	//session.setAttribute("smarks2",marks2d);
+	//session.setAttribute("scoll",colld);
+	//session.setAttribute("smarks3",marks3d);
+ 	%>
 </body>
 </html>

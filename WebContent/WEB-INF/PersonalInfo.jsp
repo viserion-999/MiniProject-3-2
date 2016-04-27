@@ -1,3 +1,4 @@
+<%@page import="java.util.*"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head><link type="text/css" rel="stylesheet" href="css/form_style.css">
@@ -7,7 +8,7 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script>
   $(function() {
-    $( "#datepicker" ).datepicker({ dateFormat: 'dd-mm-yy' });;
+    $( "#datepicker1" ).datepicker({ dateFormat: 'dd-mm-yy' });;
   });
   </script>
 </head>
@@ -42,13 +43,14 @@
 			<br>
 			
 			<label for="dob">Your DOB*</label><br>
-   					 <input type="text" id="datepicker" name="dob" />
+   					 <input type="text" id="datepicker1" name="dob" />
    			<br>
 			
 			 <label for="nationality">Your nationality</label><br>
     		<input type="text" id="nationality" name="nationality" />
     		
     		<br>
+			
 			
 	
    			 <label for="email">Your e-mail*</label><br>
@@ -80,6 +82,23 @@
                   
             </form>
   </div>
+  <%
+	String named=request.getParameter("name");
+	String emaild=request.getParameter("email");
+	
+	String hobbiesd=request.getParameter("hobbies");
+	String dobd=request.getParameter("dob");
+	String genderd=request.getParameter("gender");
+	String mobiled=request.getParameter("number");
+	List<String> pers = new ArrayList<String>();
+	pers.add("named");
+	pers.add("emaild");
+	
+	pers.add("hobbiesd");
+	pers.add("dobd");
+	pers.add("genderd");
+	pers.add("mobiled");
+	%>
 </div>
 </body>
 </html>

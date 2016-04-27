@@ -53,6 +53,18 @@
        
             </form>
   </div>
+  	String expd=request.getParameter("companyname");
+	String erefd=request.getParameter("jobtitle");
+	String esald=request.getParameter("startdate");
+	String esalh=request.getParameter("enddate");
+	String cityd=request.getParameter("city");
+	List<String> proff = new ArrayList<String>();
+	proff.add("expd");
+	proff.add("erefd");
+	proff.add("esald");
+	proff.add("esalh");
+	proff.add("cityd");
+	session.setAttribute("professional",proff);
 </div>
 
 </body>

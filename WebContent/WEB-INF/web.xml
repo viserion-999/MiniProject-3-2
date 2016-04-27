@@ -15,5 +15,9 @@
  	<servlet-name>spring-dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
   </servlet-mapping>
-    
+  <servlet>
+    <servlet-name>dbconn</servlet-name>
+    <servlet-class>com.form_input.dbconn</servlet-class>
+  </servlet>
+  
 </web-app>
